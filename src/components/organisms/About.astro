@@ -1,0 +1,8 @@
+---
+import SectionHeader from '../molecules/SectionHeader.astro';
+import { sections, about } from '../../data/site';
+---
+<section id="about">
+  <SectionHeader cmd={sections.about.cmd} title={sections.about.title} />
+  <p class="prose" set:html={about} />
+</section>

@@ -1,0 +1,9 @@
+---
+// Tile-header hash slot. Starts in the pending "wait" state; the matching
+// fingerprint vector fills it in and clears the wait styling.
+interface Props {
+  id: string;
+}
+const { id } = Astro.props;
+---
+<span class="h wait" id={id}>…</span>

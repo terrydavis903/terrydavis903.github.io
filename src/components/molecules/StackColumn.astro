@@ -1,0 +1,14 @@
+---
+import type { StackColumn } from '../../data/stack';
+interface Props {
+  column: StackColumn;
+}
+const { column } = Astro.props;
+const colcls = column.now ? 'col now' : 'col';
+---
+<div class={colcls}>
+  <h4>// {column.heading}</h4>
+  <ul>
+    {column.items.map((i) => <li>{i}</li>)}
+  </ul>
+</div>

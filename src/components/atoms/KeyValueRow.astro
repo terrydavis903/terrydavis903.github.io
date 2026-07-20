@@ -1,0 +1,13 @@
+---
+// A single key/value row inside a fingerprint tile. `id` is optional (static
+// rows omit it); `wait` renders the pending style until a vector fills it.
+interface Props {
+  k: string;
+  id?: string;
+  wait?: boolean;
+  initial?: string;
+}
+const { k, id, wait = false, initial = '—' } = Astro.props;
+const vcls = wait ? 'v wait' : 'v';
+---
+<div class="trow"><span class="k">{k}</span><span class={vcls} id={id}>{initial}</span></div>

@@ -1,0 +1,8 @@
+---
+interface Props {
+  variant: 'live' | 'now' | 'pip';
+}
+const cls = { live: 'live-dot', now: 'now-dot', pip: 'pip' } as const;
+const { variant } = Astro.props;
+---
+<span class={cls[variant]}></span>

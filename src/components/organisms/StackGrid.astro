@@ -1,0 +1,12 @@
+---
+import SectionHeader from '../molecules/SectionHeader.astro';
+import StackColumnComp from '../molecules/StackColumn.astro';
+import { sections } from '../../data/site';
+import { stack } from '../../data/stack';
+---
+<section id="stack">
+  <SectionHeader cmd={sections.stack.cmd} title={sections.stack.title} />
+  <div class="stack">
+    {stack.map((c) => <StackColumnComp column={c} />)}
+  </div>
+</section>

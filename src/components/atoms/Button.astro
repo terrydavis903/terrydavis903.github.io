@@ -1,0 +1,16 @@
+---
+interface Props {
+  href: string;
+  variant?: 'solid' | 'ghost';
+  external?: boolean;
+}
+const { href, variant = 'solid', external = false } = Astro.props;
+const cls = variant === 'ghost' ? 'btn ghost' : 'btn';
+---
+{
+  external ? (
+    <a class={cls} href={href} target="_blank" rel="noopener"><slot /></a>
+  ) : (
+    <a class={cls} href={href}><slot /></a>
+  )
+}

@@ -1,0 +1,12 @@
+---
+import SectionHeader from '../molecules/SectionHeader.astro';
+import WorkCard from '../molecules/WorkCard.astro';
+import { sections } from '../../data/site';
+import { projects } from '../../data/projects';
+---
+<section id="work">
+  <SectionHeader cmd={sections.work.cmd} title={sections.work.title} />
+  <div class="work">
+    {projects.map((p) => <WorkCard project={p} />)}
+  </div>
+</section>

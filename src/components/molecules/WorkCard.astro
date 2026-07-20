@@ -1,0 +1,16 @@
+---
+import Tag from '../atoms/Tag.astro';
+import type { Project } from '../../data/projects';
+interface Props {
+  project: Project;
+}
+const { project } = Astro.props;
+---
+<article class="card">
+  <div class="top"><h3>{project.title}</h3><span class="kind">{project.kind}</span></div>
+  <p>{project.description}</p>
+  <div class="tags">{project.tags.map((t) => <Tag>{t}</Tag>)}</div>
+  {project.link && (
+    <a class="link" href={project.link.href} target="_blank" rel="noopener">{project.link.label}</a>
+  )}
+</article>

@@ -1,0 +1,14 @@
+---
+import HashBadge from '../atoms/HashBadge.astro';
+interface Props {
+  name: string;
+  hashId: string;
+}
+const { name, hashId } = Astro.props;
+---
+<div class="tile">
+  <div class="th"><span class="name">{name}</span><HashBadge id={hashId} /></div>
+  <div class="tb">
+    <slot />
+  </div>
+</div>

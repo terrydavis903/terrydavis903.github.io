@@ -1,0 +1,64 @@
+---
+import SectionHeader from '../molecules/SectionHeader.astro';
+import StatusDot from '../atoms/StatusDot.astro';
+import FingerprintTile from '../molecules/FingerprintTile.astro';
+import KeyValueRow from '../atoms/KeyValueRow.astro';
+import { sections, fingerprintFoot } from '../../data/site';
+---
+<section id="capture">
+  <SectionHeader cmd={sections.capture.cmd} title={sections.capture.title} />
+
+  <div class="fp-status"><StatusDot variant="live" /><span id="st">reading signals…</span></div>
+
+  <div class="fp-grid" id="grid">
+
+    <FingerprintTile name="webgl" hashId="h-webgl">
+      <KeyValueRow k="vendor" id="gl-vendor" />
+      <KeyValueRow k="renderer" id="gl-renderer" />
+    </FingerprintTile>
+
+    <FingerprintTile name="audio" hashId="h-audio">
+      <KeyValueRow k="context" initial="OfflineAudioContext" />
+      <KeyValueRow k="stack" id="audio-note" initial="rendering…" />
+    </FingerprintTile>
+
+    <FingerprintTile name="fonts" hashId="h-fonts">
+      <KeyValueRow k="detected" id="font-count" initial="…" />
+      <KeyValueRow k="sample" id="font-list" initial="…" />
+    </FingerprintTile>
+
+    <FingerprintTile name="navigator" hashId="h-nav">
+      <KeyValueRow k="browser" id="ua" />
+      <KeyValueRow k="os" id="os" />
+      <KeyValueRow k="langs" id="lang" />
+      <KeyValueRow k="hardware" id="hw" />
+    </FingerprintTile>
+
+    <FingerprintTile name="screen" hashId="h-screen">
+      <KeyValueRow k="resolution" id="scr" />
+      <KeyValueRow k="viewport" id="vp" />
+      <KeyValueRow k="color" id="gamut" />
+    </FingerprintTile>
+
+    <FingerprintTile name="intl / time" hashId="h-intl">
+      <KeyValueRow k="timezone" id="tz" />
+      <KeyValueRow k="clock" id="clk" />
+      <KeyValueRow k="locale" id="locale" />
+    </FingerprintTile>
+
+    <FingerprintTile name="network" hashId="h-net">
+      <KeyValueRow k="ip" id="ip" wait initial="resolving…" />
+      <KeyValueRow k="location" id="loc" wait initial="resolving…" />
+      <KeyValueRow k="asn" id="asn" wait initial="resolving…" />
+      <KeyValueRow k="webrtc" id="rtc" wait initial="probing…" />
+      <KeyValueRow k="conn" id="conn" />
+    </FingerprintTile>
+
+  </div>
+
+  <div class="fp-foot" set:html={fingerprintFoot} />
+</section>
+
+<script>
+  import '../../scripts/fingerprint/index';
+</script>

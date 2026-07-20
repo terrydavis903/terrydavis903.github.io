@@ -1,0 +1,6 @@
+---
+import { navLinks } from '../../data/site';
+---
+<nav class="top">
+  {navLinks.map((l) => <a href={l.href}>{l.label}</a>)}
+</nav>

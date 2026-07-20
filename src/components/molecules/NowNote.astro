@@ -1,0 +1,8 @@
+---
+import StatusDot from '../atoms/StatusDot.astro';
+import { now } from '../../data/site';
+---
+<div class="now-note">
+  <StatusDot variant="now" />
+  <p set:html={now} />
+</div>

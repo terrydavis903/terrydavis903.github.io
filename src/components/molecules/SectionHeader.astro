@@ -1,0 +1,12 @@
+---
+import CommandLabel from '../atoms/CommandLabel.astro';
+interface Props {
+  cmd: string;
+  title: string;
+}
+const { cmd, title } = Astro.props;
+---
+<div class="sec-head">
+  <CommandLabel text={cmd} />
+  <h2>{title}</h2>
+</div>

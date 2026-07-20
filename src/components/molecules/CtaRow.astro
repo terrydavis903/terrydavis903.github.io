@@ -1,0 +1,9 @@
+---
+import Button from '../atoms/Button.astro';
+import { hero } from '../../data/site';
+---
+<div class="cta-row">
+  {hero.cta.map((c) => (
+    <Button href={c.href} variant={c.variant} external={c.external}>{c.label}</Button>
+  ))}
+</div>

@@ -1,0 +1,25 @@
+---
+import '../styles/tokens.css';
+import '../styles/global.css';
+import { meta } from '../data/site';
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{meta.title}</title>
+<meta name="description" content={meta.description} />
+<meta property="og:title" content={meta.ogTitle} />
+<meta property="og:description" content={meta.ogDescription} />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0D13'/%3E%3Cpath d='M11 8 L21 16 L11 24 Z' fill='none' stroke='%238E7BFF' stroke-width='1.6'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body id="top">
+<slot />
+</body>
+</html>

@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/organisms/SiteHeader.astro';
+import Hero from '../components/organisms/Hero.astro';
+import FingerprintDashboard from '../components/organisms/FingerprintDashboard.astro';
+import Divider from '../components/atoms/Divider.astro';
+import About from '../components/organisms/About.astro';
+import WorkGrid from '../components/organisms/WorkGrid.astro';
+import StackGrid from '../components/organisms/StackGrid.astro';
+import Now from '../components/organisms/Now.astro';
+import SiteFooter from '../components/organisms/SiteFooter.astro';
+---
+<BaseLayout>
+  <SiteHeader />
+  <main class="wrap">
+    <Hero />
+    <FingerprintDashboard />
+    <Divider />
+    <About />
+    <WorkGrid />
+    <StackGrid />
+    <Now />
+  </main>
+  <SiteFooter />
+</BaseLayout>

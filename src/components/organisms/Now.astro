@@ -1,0 +1,9 @@
+---
+import SectionHeader from '../molecules/SectionHeader.astro';
+import NowNote from '../molecules/NowNote.astro';
+import { sections } from '../../data/site';
+---
+<section id="now">
+  <SectionHeader cmd={sections.now.cmd} title={sections.now.title} />
+  <NowNote />
+</section>

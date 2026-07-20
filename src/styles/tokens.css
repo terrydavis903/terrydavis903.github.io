@@ -1,0 +1,10 @@
+:root{
+  --bg:#0A0D13; --surface:#10151E; --surface-2:#141A25; --panel:#0D1119;
+  --line:#222A39; --line-soft:#1a2130;
+  --text:#E7ECF3; --muted:#8B95A9; --dim:#5c6577;
+  --accent:#8E7BFF; --ok:#4ADE80; --warn:#FFC24B; --leak:#FF6B6B;
+  --maxw:1080px;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --sans:'IBM Plex Sans',system-ui,sans-serif;
+  --display:'Space Grotesk',var(--sans);
+}

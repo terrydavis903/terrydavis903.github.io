@@ -1,0 +1,11 @@
+---
+import Eyebrow from '../atoms/Eyebrow.astro';
+import CtaRow from '../molecules/CtaRow.astro';
+import { hero } from '../../data/site';
+---
+<div class="hero">
+  <Eyebrow>{hero.eyebrow}</Eyebrow>
+  <h1>{hero.headline.pre}<span class="accent-word">{hero.headline.accent}</span>{hero.headline.post}</h1>
+  <p class="lede" set:html={hero.lede} />
+  <CtaRow />
+</div>
