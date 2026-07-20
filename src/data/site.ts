@@ -5,10 +5,10 @@
 export const handle = 'terrydavis903';
 
 export const meta = {
-  title: 'Read the layer underneath',
+  title: 'Omar Hu — systems & reverse engineering',
   description:
-    'Systems and reverse-engineering engineer. Low-latency Rust, on-chain infrastructure, anti-bot VM reversing — now moving into RF and photonics.',
-  ogTitle: 'terrydavis903',
+    'Omar Hu — systems and reverse-engineering engineer. Low-latency Rust, on-chain infrastructure, anti-bot VM reversing — now moving into RF and photonics.',
+  ogTitle: 'Omar Hu',
   ogDescription:
     'I read the layer underneath — low-latency Rust, on-chain infra, anti-bot VM reversing. Now moving into RF & photonics.',
 };
@@ -22,10 +22,10 @@ export const navLinks = [
 
 export const hero = {
   eyebrow: 'systems · reverse engineering',
-  // headline: "Read the <accent>layer</accent> underneath"
-  headline: { pre: 'Read the ', accent: 'layer', post: ' underneath' },
+  name: 'Omar Hu',
+  education: 'MS ECE @ Georgia Tech · BS CS @ NYIT',
   lede:
-    'Engineer working close to the metal — <b>low-latency Rust</b>, on-chain data infrastructure, and <b>anti-bot VM reverse engineering</b>. I read what\'s beneath the abstraction. Now chasing the same signal into <b>light</b>.',
+    'I read the <span class="accent">layer underneath</span> — <b>low-latency Rust</b>, on-chain data infrastructure, and <b>anti-bot VM reverse engineering</b>. Now chasing the same signal into <b>light</b>.',
   cta: [
     { label: 'Fingerprint my browser ↓', href: '#capture', variant: 'solid' as const, external: false },
     { label: 'GitHub ↗', href: 'https://github.com/terrydavis903', variant: 'ghost' as const, external: true },

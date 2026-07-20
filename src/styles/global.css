@@ -19,10 +19,10 @@ nav.top a:hover{color:var(--text)}
 .hero{position:relative;padding:76px 0 22px}
 .hero .eyebrow{margin-bottom:20px}
 h1{font-family:var(--display);font-weight:700;font-size:clamp(44px,8vw,84px);line-height:1.02;letter-spacing:-.02em;max-width:14ch}
-h1 .thin{color:var(--muted);font-weight:500}
-h1 .accent-word{color:var(--accent)}
-.lede{margin-top:24px;max-width:56ch;font-size:clamp(18px,2.4vw,22px);color:var(--muted)}
+.hero-edu{margin-top:16px;font-family:var(--mono);font-size:clamp(14px,1.8vw,16px);color:var(--muted);letter-spacing:.01em}
+.lede{margin-top:20px;max-width:56ch;font-size:clamp(18px,2.4vw,22px);color:var(--muted)}
 .lede b{color:var(--text);font-weight:500}
+.lede .accent{color:var(--accent)}
 .cta-row{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
 .btn{font-family:var(--mono);font-size:15px;padding:12px 20px;border:1px solid var(--line);border-radius:2px;color:var(--text);transition:border-color .2s,background .2s}
 .btn:hover{border-color:var(--accent);background:var(--surface)}
